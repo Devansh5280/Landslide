@@ -1,0 +1,4 @@
+env: python
+pythonVersion: "3.9"  # or a version within 3.7 to 3.10
+buildCommand: pip install -r requirements.txt
+startCommand: python app.py

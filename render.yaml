@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: your-service-name  # Replace with your actual service name
+    env: python
+    pythonVersion: "3.9"  # Make sure it's within the supported range (3.7 - 3.10)
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --timeout 120 app:app  # Use gunicorn for production deployment
+    plan: free  # Optional: Adjust the plan based on your needs
+    branch: main  # The branch to deploy (usually main or master)
+    regions:
+      - oregon  # Optional: Choose your deployment region
+
